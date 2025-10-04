@@ -1,6 +1,6 @@
 /*
  * Lab 3, Task 1
- * Student Name, Student ID
+ * Ilyas Altynbekov, 231ADB290
  *
  * Implement array algorithms:
  *   - find minimum value
@@ -56,15 +56,31 @@ int array_min(int arr[], int size) {
 
 int array_max(int arr[], int size) {
     // TODO: return largest element
-    return 0; // placeholder
+    int my_max = INT_MIN;
+    for (int i = 0; i < size; i++) {
+        if (my_max < arr[i]) {
+            my_max = arr[i];
+    }
+}
+    return my_max;// placeholder
 }
 
 int array_sum(int arr[], int size) {
     // TODO: return sum of elements
-    return 0; // placeholder
+    if (size <= 0) return 0;
+    int sum = 0;
+    for (int i = 0; i < size; i++) {
+        sum += arr[i];
+    }
+    return sum; // placeholder
 }
 
 float array_avg(int arr[], int size) {
     // TODO: return average as float
-    return 0.0f; // placeholder
+    if (size <= 0) return 0.0f;
+    int sum = 0;
+    for (int i = 0; i < size; i++) {
+        sum += arr[i];
+    }
+    return (float)sum / size; // placeholder
 }
